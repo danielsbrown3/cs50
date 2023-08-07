@@ -1,0 +1,206 @@
+Lecture 1
+Coding in C
+
+<include stdio.h> //header file that includes printf, informs the compiler that you wanna use printf
+int main(void)
+{
+  string answer = get_name(" What's your name? ");
+  printf("hello, %s\n", answer);
+}
+What's your name? 
+$ user inputs Daniel
+hello, Daniel
+
+// ctrl L deletes things
+
+/n is new line 
+
+To run a program
+make (program name)
+./(program name)
+
+In order to search the manaul visit manual.cs50.io , search this if you are stuck
+cs50.h stores a lot of functions
+To ask a user for their name
+$ string answer = get_string("Whats your name? "); //using a function from cs50.h //need to define data type at beinginng
+
+data types in C:
+bool, char, double, float, int, img, sound ....
+
+conditionals in C:
+$
+if (x<y)
+{
+  printf("x is less than y\n");
+}
+else if (x>y)
+{
+  printf("x is greater than y\n");
+}
+else if (x==y)
+{
+  printf("x is equal to y")
+}
+$
+
+creating a compare code in C:
+$ code compare.c //creates the compare file in C
+#include <cs50.h> //includes cs50 library
+#include <stdio.h>
+
+int main(void)
+{
+  int x = get_int("What's x? ");
+  int y = get_int("What's y? ");
+
+  if (x<y)
+  {
+    printf("x is less than y\n");
+  }
+  else if (x>y)
+  {
+    printf("x is greater than y\n");
+  }
+  else if (x==y)
+  {
+    printf("x is equal to y")
+  }
+}
+$
+
+Code for prompting user for a character (character needs '') (|| means or)
+$
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+  char c = get_char("Do you agree? "):
+
+  if (c== 'y' || c=='Y')
+  {
+    printf("Agreed.\n");
+  }
+  else if (c == 'n' || c=='N')
+  {
+    print("Not agreed. \n");
+  }
+}
+$
+
+Write a program in C that emmulates a code meowing
+$
+#include <stdio.h>
+
+int main(void)
+{
+  int counter = 0; //only need int when intializing for the first time
+  while (counter < 3)
+    {
+    printf("meow\n");
+    counter += 1; //counter++ used for only adding 1 
+    }
+}
+$
+
+Meowing using a for loop
+$
+#includ <stdio.h>
+int main(void)
+{
+  for (int count = 0; count < 3; count++)
+  {
+      printf("meow\n");
+  }
+$
+
+Meowing in an infinite loop
+$
+#include  <stdio.h>
+#include <cs50.io>
+
+while(true)
+{
+  printf("Meow \n");
+}
+$
+
+Typing ls list all the files in your environment. mv renames the file in your enviorment. cd changes
+into the directory. cp copies a files. rm removes file. 
+
+$
+#include <stdio.h>
+#include <cs50.io>
+
+int main(void)
+{
+  //const int n = 5; //constant that you cannot change 5
+  int n;
+  do
+  {
+    n = get_int("Size: ")
+  }
+  while (n<1); // gets input from user and see if it meets requirements in do
+
+  for (int rows = 0; rows<4; rows++) // 4 loops
+  {
+    for (int columns = 0; columns<4; columns++)
+    {
+      printf("#");
+    }  
+  printf("\n")
+  }
+}
+
+Creating functions in C
+$ 
+#include <cs50.h>
+#include <stdio.h>
+
+int get_size(void); //lets call function whenever
+void print_grid(int size);
+int main(void)
+{
+  int n = get_size();
+  print_grid(n);
+}
+
+int get_size(void)
+{
+  int n;
+  do
+  {
+    n = get_int("Size: ");
+  }
+  while(n<1);
+  return n;
+}
+
+void print_grid(int size) //inserts input // no return value starts with void
+{
+  for (int i = 0; i< size; i++)
+  {
+    for (int j = 0; j<size;j++)
+    {
+        printf("#");
+    }
+  }
+}
+$  
+
+Create a calculator in C that can take in digits larger than 8
+$
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    long x = get_long("x: "); // instead of int use long to use 64 bits
+    long y = get_int("y: ");
+    printf("%i\n",x+y) //%i represents int //%f represents floats
+}
+$
+
+int is least precise. long is more precise. float gives decimal. 
+
+
