@@ -203,4 +203,106 @@ $
 
 int is least precise. long is more precise. float gives decimal. 
 
+Section 1:
+Review:
+Since the computer is in a binary, data types let the computer know what we are requesting for example instead of assigning
+the number 7 the number 7 it assigns it the letter "A"
+
+%i is format code for integer
+%f is format code for float
+%li is format code for float
+
+integer can store 4 billion values
+long can store 8 billion values
+
+anything longer than 8 digits needs a long
+
+requesting user for their phone number
+$
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void)
+{
+  string_name = get_string("What is your name? ");
+  phone= get_string("What is your number? ");
+  age= get_int("What is your age? ");
+
+  printf("Age is %s phone number is %s and age is %i ", string name, phone, age);
+}
+
+Data Types
+Int
+*int always take up 4 bytes of data (32 bits)
+*-2^31 to 2^31 - 1 (0 inclusive) (2 billion max)
+Unsigned int
+*Disallows negative values and doubles positive values
+*o to 2^32 -1 (4 billion max)
+Chars
+* char take up 1 byte of memory (8 bits)
+* -128 to 127
+Float
+* float take up 4 bytes of memory (32 bits)
+Void is a type but not a data type
+*function doesnt have a return value
+*parameter list of a function can be void means the function takes no parameters
+* place holder for "nothing"
+Bool
+*true or false
+*need to use library in C for booleans
+
+Can create multiple variables at the same time
+int height, width;
+
+
+Operators
++,-,*,/,%
+x*=5 is the same as x = x *5
+x++ is the same as x = x + 1
+
+boolean
+every nonzero value is true
+0 is false
+&& both and 
+|| either or
+! not operator
+<,>,<=,>=
+
+switch
+when you call the case it executes whats below
+
+int x = get_int();
+switch x
+{
+  case 5:
+    printf("Five ");
+  case 4:
+    printf("Four" );
+etc good for making timer
+
+ternary operator (if else but realy short)
+
+int x = (expr) ? 5 : 6; // if int x = expression x=5 else x=6
+
+ctrl c will kill infinite loop
+
+Loop
+
+for (start,exp,iteration)
+{
+}
+
+Command Line
+ls //list
+cd //change directory
+pwd //present working directory
+ctrl + l //clears the screen
+cd .. //moves to parent directory
+mkdir //makes directory
+cp <source> <destination> //copy
+cp -r <source> <destination> //copies directory
+rm <file> //deletes file
+mv <source> <destination> //moves file //renames files
+
+
 
