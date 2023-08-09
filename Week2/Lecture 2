@@ -155,8 +155,27 @@ int main(void)
 
 instead of this compelx code can use islower(s[i]) returns true or false boolean value
 
+Command Line Arguments
+======================
+inserting argc (length of array) and arv (array of strings)
+instead of having get_string() to prompt the user 
+can 
+int main(int argc, string argv[])
+{
+   printf("Hello, %s %s\n",argv[1],argv[2])
+  //takes in two strings as input in command line when running the program and stores and returns them after Hello
+}
 
-  
+exit status
+===========
+whenever a function runs it returns a secret integer
+
+echo $? returns what the code returns
+0 means the code ran correctly
+
+cryptography
+============
+cipher encrpys something from plaintext to ciphertext
 
 
 
