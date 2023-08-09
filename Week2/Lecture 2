@@ -1,0 +1,163 @@
+Last week in C used "make" short cut to compile our programs in clang 
+However that will not work for most of our programs 
+Command line argument
+clang -o hello hello.c
+(compiler) (-output) (output file name) (file)
+
+if you run a default compiler the out is a.out
+
+clang -o hello hello.co -lcs50
+(compiler) (-operator) (file name) (list cs50 because call the library)
+stdio.h is already provide with C
+
+prepreocessing
+================
+# is preprocessed in C
+The libraries that you include are stored in your hard drive in /usr/include 
+to see whats in there /l /usr/include basically creates the functions of the library
+
+compiling
+================
+conversion of C into assembly code
+
+assembling
+================
+converts text file into assembly 
+assembly looks like
+main
+  pushq
+  xorl
+  movl
+  callq get_string
+
+linking
+=================
+links all the 01010101 for the libraries and files together
+
+decompile
+=================
+might not tell you what is wrong with your code as for loops and while loops may look the same
+
+debugging
+=================
+add in printline everywhere
+print out the iterator in your loop
+debugger is built in vsCode
+all the way to the left of the code click break point
+then run 
+# debug50 ./(code name)
+will highlight where the error occurs
+tells you all the variables that exist on the left
+debug has GUI to assist in debugging 
+
+rubber duck
+===============
+talk to someone or an imaginary duck
+
+types
+===============
+bool 1 byte
+int 4 bytes
+long 8 bytes
+float 4 bytes
+double 8 bytes
+char 1 byte
+string ? bytes
+
+#include <stdio.h>
+
+int main(void)
+{
+  int score1= 72;
+  int score2= 73;
+  int score3= 33;
+
+  printf(" Average: %i\n", (score1 + score2 + score3) / 3.0);
+}
+// be sure that 3 is a float since we get a float when we take the average
+
+Arrays
+=============
+an array must use an int to call which element there is
+
+ints scores[3]; //initializes an array
+score[0]= 72;
+score[1]= 73;
+score[2]= 33;
+
+or 
+
+for (int i = 0; i < 3; i++)
+{
+  scores[i]=get_int("scores: ");
+}
+
+function
+=============
+
+const int N = 3;
+float average(int array[])
+{
+  int sum = 0; //intialize sum
+  for (int i = 0; i < N, i++) //starting at i = 0 for i < N loop through then add 1 to i
+  {
+    sum = sum + array[i] //for each loop add sum and the corresponding i element in array
+  }
+  return sum / (float) N //return the sum divided by the total
+}
+
+strings
+===========
+in memory can think of it as char or int in an array
+always has 1 extra byte \0 NUL letting the computer know the string ends
+
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+  string name = get_name("What's your name? ");
+
+  int n = 0;
+  while ([n] != '\0')
+  {
+    n++;
+  }
+  printf("%i\n",n);
+}
+
+string.h a library of string related functions
+strlen tells you the length of a string
+
+ctype.h a library for chars
+
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+  string s = get_string("Before :");
+  printf("After: ");
+  for (int = 0; i < strlen(s); i++)
+  {
+    if (s[i] >= 'a' && s[i] <= 'z')
+    {
+      printf("%c", s[i] - 32); //converts lowercase to uppercase 
+    }
+    else
+    {
+      printf("%c",s[i]);
+    }
+  }
+}
+
+instead of this compelx code can use islower(s[i]) returns true or false boolean value
+
+
+  
+
+
+
+
