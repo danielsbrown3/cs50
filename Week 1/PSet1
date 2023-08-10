@@ -1,0 +1,49 @@
+//The task was to create a mario mountain. Basically nest some loops such that you can print a different outcome depending on the iteration in the loop
+
+//I learned how to create and compile a C code in VSCode
+//create the code by finding a directory you want to be in >>cd directoryname
+//create the c file >>code filename
+//compile the C code >>gcc -o filename.c filename
+//run the file ./filename
+
+//My logic is a little flawed with loops and I'm still working on it but I eventually got the result with some help.
+
+#include <stdio.h>
+
+int main(void)
+{
+    int height;
+    //first prompt the user for the size of their cool shape
+    do
+    {
+        printf("Height: ");
+        fflush(stdout);
+        scanf("%d", &height);
+    } while (height < 0 || height > 8);
+
+    //Now we have the height of our shape
+    //Create an antiheight so that we have multible variables to work with
+    int antiheight = height;
+    int proheight = 0;
+    //Create each row with a forloop
+    for (int row = 0; row < height; row++)
+    {
+        for (int space=antiheight;space>0;space--) //create spaces that decrease by 1 for each row
+        {
+            printf(" ");
+        }
+
+        for (int o=0;o<height-antiheight;o++) //create 0 that increases by 1 for each row
+        {
+            printf("0");
+        }
+        printf("  ");
+        for (int o=0;o<height-antiheight;o++)
+        {
+            printf("0");
+        }
+        printf("\n");
+        antiheight--;
+        proheight++;
+    }
+}
