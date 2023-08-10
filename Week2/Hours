@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+//prompt the user for number of weeks taking course
+
+int main(void)
+{
+    int weeks; 
+    do
+    {
+    printf("Number of weeks taking CS50? ");
+    scanf("%d", &weeks);
+    }
+    while(weeks < 0 || weeks > 10);
+
+    //create an array the size of weeks
+    int warray[weeks];
+    for (int i=0; i<weeks; i++)
+    {
+        printf("Week %i Hours: \n",i);
+        warray[i]=i;
+    }
+    
+    printf("%c",warray[i]);
+}
