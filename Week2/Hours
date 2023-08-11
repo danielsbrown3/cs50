@@ -8,17 +8,45 @@ int main(void)
     do
     {
     printf("Number of weeks taking CS50? ");
-    scanf("%d", &weeks);
+    scanf("%d", &weeks); //I don't have get_string from the cs50 library so C uses scanf or maybe stdio.h does 
     }
     while(weeks < 0 || weeks > 10);
 
     //create an array the size of weeks
     int warray[weeks];
-    for (int i=0; i<weeks; i++)
+    int grind; //intialize a time that you work everyday
+    for (int i=0; i<weeks; i++)//loop through the amount of weeks
     {
-        printf("Week %i Hours: \n",i);
-        warray[i]=i;
+        printf("Week %i Hours: \n",i);//prompt user for how much time spends each day
+        scanf("%d", &grind);// %d represents a single decimal integer
+        warray[i]=grind;//assign the hours per day to the according element
     }
-    
-    printf("%c",warray[i]);
+    char AorT;
+    do
+    {
+        printf("Enter T for total hours and A for average hours: ");
+        scanf("%c", &AorT);
+    } 
+    while (AorT != 'A' && AorT !='T');
+
+    //If you try and print just an array, it will print where its stored, to print it you must loop through each element in a forloop
+
+
+    int summation=0;//make sure when intializing something at 0 it is outside the loop lmao
+    for (int j = 0;j<weeks;j++)
+    {
+        summation= summation + warray[j];//Computed the summation before the if statement so wouldn't have to run it in the if and else
+    }
+    int average = summation/weeks;
+
+    //Char needs to be in ''
+    if (AorT == 'T')
+    {
+        printf("The total amount of time is: %i\n",summation);
+    }
+    else
+    {
+        printf("The average amount of time per day is: %i\n",average);
+    }
+
 }
