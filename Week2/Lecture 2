@@ -177,6 +177,51 @@ cryptography
 ============
 cipher encrpys something from plaintext to ciphertext
 
+Section 2:
+===================
+int main(void)
+{
+  printf("Hello, world");
+}
+
+||
+\/
+$clang -o hello hello.c 
+
+Assembly
+
+||
+\/
+
+binary
+====================
+Arrays
+
+Storing information in an array is more efficient. 
+int hours = {2,3,4,14,};
+
+#include <string.h>
+
+strlen(word) //gives the length of the word
+
+Why use >>return 0; at the end of your if statement in C?
+
+Command line arguments
+int main(int argc, string arv[])
+{
+} 
+intead of inputting nothing "void" into command line, now you can input argv
+argc is just the count or length of argv
+for example
+./make mario
+argv[0] is "make" argv[1] is "mario"
+argv[1][2] would be "a"
+
+Functions
+============
+
+
+
 
 
 
