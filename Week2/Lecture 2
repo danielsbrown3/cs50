@@ -219,7 +219,80 @@ argv[1][2] would be "a"
 
 Functions
 ============
+int add_two_ints(int a, int b);
 
+int main(void)
+{
+  printf("Give me and integer: ");
+  int x = get_int();
+  printf("Give me another integer: ");
+  int y = get_int();
+
+  int z = add_two_ints(x,y);
+
+}
+
+int add_two_ints(int a, int b)
+{
+  int sum = a + b;
+  return sum;
+}
+
+Example writing my own function
+===============================
+int valid_triangle();
+
+int valid_triangle(int length, int width, int height)
+{
+  int check;
+  int check2;
+  int check3;
+  if (length > 0 || width > 0 || height > 0)
+  {
+    check = (length + width) > height;
+    check2 = (length + height) > width;
+    check3 = (width + height) > length;
+    if (check + check2 + check3 == 3)
+    {
+      return true
+    }
+  else
+  {
+  return false
+  }
+}
+}
+
+
+Scope
+==========
+local variables can only be accessed within a function
+global variables can be accessed anywhere in the script
+
+passed by value: the function doesnt recieve the variable rather it recieves a copy of the variable  (local variables)
+
+
+Arrays
+======
+hold a bunch of the same data structure in the same place
+
+arrays start at 0 and end at length-1
+
+bool battleship[10][10]; //creates a matrix of 10 x 10
+
+cannot assign 1  array to anther, need to use a loop to assign each element of one array to anther array
+
+Arrays are passed by reference, does not get a copy of an array like variables ususally are in a function
+
+Command Line Arguments
+=======================
+collecting data at the comannd line
+
+int main(int argc, string arv[])
+
+argc stand for argument count - how much stuff the user typed
+
+everything in argv is stored as a string "1023214" is stored as a string in argv not integer
 
 
 
