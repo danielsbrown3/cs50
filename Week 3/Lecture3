@@ -51,6 +51,111 @@ return 1;
 if you wanna compare strings in C 
 if (strcmp(sarray[i+1],sarray[i]))
 
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+  string strings[] = {"daniel", "is", "super", "cool","ya"};
+
+  string s = get_string("String: ");
+  for (int i = 0; i < 6; i++)
+  {
+    if strcmp(string[i],s == 0)
+    {
+        print("Found\n");
+  }
+  }
+printf("Not found\n");
+return 1;
+}
+
+Phonebook
+==========
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+  string name[] = {"Daniel", "Jo", "Connor"};
+  string numbers[] = {"+1-312-4234","+1-423-4324","+1-432-8233"};
+
+  string name = get_string("name: ");
+
+  for (int i = 0; i < 2; i++
+  {
+    if(strcmp(name[],name == 0)
+    {
+      printf("Found %s\n", number[i])
+      return 0;
+    }
+  }
+  printf("Not Found\n")
+  }
+
+Data structures
+================
+typedef struct
+{
+  string name;
+  string number;
+}
+person;
+
+int main(void)
+{
+  person people[2];
+
+  people[0].name = "Daniel";
+  people[0].number = "+1-312-4234";
+
+  people[1].name = "Jo";
+  people[1].number = "+1-423-4324";
+}
+
+Sorting
+=======
+2348091
+
+single element sorting(selection sorting)- 
+loop through each element of array and compare to first element if its less than, then swap
+this will allow you to order them from least to greatest
+
+dual element group sorting (bubble sort)-
+compare the 1rst element to the second element the second element to the third element the third element to the fourth element
+
+to find the smallest number it takes n^2/2-n/2 steps
+O(n^2)
+
+bubble sort
+repeat n-1 times
+  for i from 0 to n-2
+
+Recursion- when a function calls itself
+=========
+
+$iteration
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+  int height = get_int("height: ");
+  draw(height);
+}
+
+void draw(int n)
+{
+  for (int i=0;i<n;i++)
+  {
+  
+    
+
+
+
+
 
 
 
