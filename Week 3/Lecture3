@@ -151,7 +151,10 @@ void draw(int n)
   for (int i=0;i<n;i++)
   {
   
-    
+
+BUBBLE SORT
+SELECTION SORT
+MERGE SORT
 
 
 
