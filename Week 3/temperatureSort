@@ -1,0 +1,59 @@
+//I really struggled with this one, I didnt realize you needed a second for loop for bubble sorting
+
+#include <stdio.h>
+#include <string.h>
+
+typedef struct
+{
+    char city;
+    int temperature;
+}
+tempCity;
+
+
+int main(void)
+{
+    tempCity storage[5];
+
+    storage[0].city= 'L';
+    storage[0].temperature = 103;
+
+
+    storage[1].city= 'S';
+    storage[1].temperature = 93;
+
+    storage[2].city= 'P';
+    storage[2].temperature = 107;
+
+    storage[3].city= 'N';
+    storage[3].temperature = 73;
+
+    storage[4].city= 'A';
+    storage[4].temperature = 84;
+
+    int temp;
+    char tempchar;
+    for (int j = 0; j < 5; j++) {
+        for (int i = 0; i < 5;i++)
+        {
+            if (storage[i-1].temperature < storage[i].temperature)
+            {
+                temp = storage[i-1].temperature; //temp = temp[0]
+                tempchar = storage[i-1].city; //tempchar = city[0]
+            
+                storage[i-1].temperature = storage[i].temperature; //temp[0] = temp[1]
+                storage[i-1].city = storage[i].city;
+
+                storage[i].temperature = temp; //temp[1]=temp[0]
+                storage[i].city = tempchar;
+            }
+        }
+        
+    }
+
+    for (int k = 0; k < 5; k++)
+    {
+        printf("City: %c, Temperature: %d\n", storage[k].city, storage[k].temperature);
+    }
+    return 0;
+}
