@@ -1,0 +1,145 @@
+hexidecimal (base 16) 
+=====================
+0 1 2 3 4 5 6 7 8 9 a b c d e f
+
+base 16
+
+01 02 03 04 05 06 07 08 09 0a 0b 0c
+
+hexidecimal is 4 bytes
+
+0x means hexidecimal
+
+pointers
+========
+a variables that contains the address of some value
+
+string
+======
+char *s
+
+Address
+=======
+to get an address of any variable use & in fron of 
+for example address of s[0] is &s[0]
+
+Comparing char / strings
+=========================
+when comparing strings and chars it, the code will check if the address of the value is the same
+they will never be the same since they are stored at different locations in memory
+
+need to use strcmp (string compare)
+
+copy.c
+======
+copying addresses to another address is easier than copying each character element of a string
+
+malloc
+======
+gives you access to memory you request
+
+#include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h> //required for malloc
+#include <string.h>
+
+int main(void)
+{
+  char *s = get_string("s: ");
+
+  char *t = s;
+
+  if (strlen(t) > 0)
+  {
+    t[0] = toupper(t[0]);
+  }
+
+  printf("s: %s\n, s);
+  printf("t: %s\n, t);
+
+  free(t); //free memory after you use it //use whenever you use malloc
+
+  return 0;
+}
+
+valgrind
+=========
+debugger for memory
+
+buffer overflow
+===============
+getting user input without using get cs50 library
+
+#include <stdio.h>
+
+int main(void)
+{
+  int x;
+  printf("x: ");
+  scanf("%i",&x);
+  printf("x: %i",x);
+}
+
+Storing in files
+=================
+storing in comma seperate file format (csv)
+
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+  FILE *file = fopen("phonebook.csv","a")
+  string name = get_string("Name: ");
+  string number = get_string("Number: ");
+  
+  fprintf(file, "%s,$s\n", name, number);
+  fclose(file);
+}
+
+Pointers
+=========
+pointers store valuables in hexidecimal addresses
+
+int p = 4; //actual value
+int p* = 0x1A; //pointer address
+
+&p; //tells us the address where p is located
+
+*p; goes to the p address
+&p; tells you p's address
+
+Address exercise
+================
+int a = 28;   value a = 28;
+int b = 50;   value b = 50
+int *c = &a;  assigns the value of a to pointer c
+
+*c = 14;  pointer c = 14 therefore value a = 14
+c = &b;  now the value of b is assigned to pointer c 
+*c = 25;  pointer c = 25 therefore value b = 25
+
+File I/O
+========
+hi.txt -> memory 0x456
+
+FILE *input = fopen("hi.txt,"r"); //r is read mode //w is write mode
+
+when opening a file there is a buffer, the first couple bytes identify what type of file it is
+for example pdf is 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
