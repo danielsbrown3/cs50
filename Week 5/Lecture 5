@@ -1,0 +1,22 @@
+Pointers
+========
+Memory
+
+Address      Memory
+0x1000       0x4
+0x1004       0x1000
+0x1008
+0x100C
+0x1010
+0x1014
+0x1018
+
+int x = 4;
+
+int * pX = &x; // * on the left side of = means pointer * on the right side means grab the memory 
+* means pointer
+& means the address of 
+
+
+
+
