@@ -18,5 +18,105 @@ int * pX = &x; // * on the left side of = means pointer * on the right side mean
 & means the address of 
 
 
+Queue- like a to do list, first in first out
+
+Enqueue- adding something to a queue
+Dequeue- subtracting something from a queue
+
+Stack- like stacking trays in the cafeteria it grabs the last added one, the trays at the bottoms
+usually never get used (First in Last Out)
+  - Example email
+
+typedef struct
+{
+  person people[CAPACITY]
+  int size;
+}
+stack;
+
+|1|2|3| <-3 bytes
+|1|2|3| | <- 4 bytes need the extra byte
+
+Moving numbers around in memory could help with continuous numbers and letters
+  - moving numbers and letters and memory can be done using pointers 
+
+Malloc gives you a chunk of usable memory
+  - malloc is in stdlib.h
+
+If malloc fails it will return NULL so you need to recognize that with if statement(there is no memory left)
+  - return 1 and free the memory
+
+Creating a list, stitching together different elements in memory, use more memory and add a pointer to each
+element that points to the next element
+
+0x0 is an invalid pointer also known as NULL
+
+the name of an array does not take up memory
+
+typedef struct node
+{
+  int number; 
+  struct node *next;
+{
+node;
+
+cannot use binary search if the memory is back to back
+
+since we are using linear memory, we cant just jump in the middle of the memory
+
+node *n = malloc(sizeof(node)): //returns the address of the memory of 2  elements
+n -> number = 1; //points to the number element that you just assigned
+n -> next = NULL; //points to the second element and sets it to NULL
+
+Searching a linked list for some value: 
+  O(n)
+
+Inserting elements into a linked list
+  O(1)
+
+Appending elements into a linked list
+  O(n)
+
+Trees are two dimensional ways of storing memory
+
+|1|2|3|4|5|6|7|
+
+When using trees can use binary search
+  -if you wanna find any number > 4 go down the right side of the tree
+  -to find any number < 4 go down the left side of the tree
+          |4|
+    |2|          |6|
+|1|    |3|    |5|    |7|
+(uses a lot of memory but is quick)
+
+linked list is just a linear list that you move down one element at a time
+  whereas
+a binary search tree you can move in to seperate directions of memory which can increase the 
+speed of searching memory, at the cost of using more memory
+
+hashing values- reducing a problem with many possibilities to a problem with a small amount of 
+possibilities
+
+hash tables
+an array with elements that are linked list ( O(n) )
+
+TRY a tree whose each node is an array
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
 
 
