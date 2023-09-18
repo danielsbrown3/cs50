@@ -102,6 +102,56 @@ an array with elements that are linked list ( O(n) )
 
 TRY a tree whose each node is an array
 
+===============
+Week 5 sections
+===============
+Working for a company and using a digital assistant
+-hey siri does not work
++add more words that will awake the assistant 
+What data structure would you use to build these stored words?
+
+Deletion 
+Insertion
+Search
+
+Linked list: 
+Deletion- fast
+Insertion- fast
+Search- slow
+
+Hash table: (lots of memory)
+Deletion- medium
+Insertion- medium
+Search- fast
+
+Trie: (lots of memory)
+Deletion- fast
+Insertion- fast
+Search- super fast
+
+//creating a node
+//first create the structure for the node
+
+typedef struct node
+{
+  string phrase;
+  struct node *next;
+}
+node;
+
+node *n malloc(sizeof(node));
+n->phrase = "Hi!";
+n->next = NULL;
+
+list = n;
+
+n = malloc(sizeof(node));
+n->phrase = "Hey!";
+n->next=list;
+
+
+
+
 
 
 
