@@ -1,0 +1,28 @@
+code hello.py
+python hello.py
+
+Concatenation
+- answer = get_string("What's your name?")
+- print(f"Hello {answer}.")
+
+=========
+data types
+=========
+bool
+float
+int
+range
+list
+tuple
+dict
+set
+
+===========================
+Object oriented programming
+===========================
+- built in programming
+- methods that come with strings that can modify their value
+- an example is s.lower() to change to lower case
+
+
+
